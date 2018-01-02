@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- The X-UA-Compatible meta tag allows web authors to choose what version of Internet Explorer the page should be rendered as -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">  <!-- to enable the responsiveness later -->
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/registerApplication.js"></script>
+    <title>Registrieren</title>
+    <link href="css/register_login.css" rel="stylesheet">
+    <script src="js/config.js"></script>
+</head>
+
+<body>
+    <!--
+    you can substitue the span of reauth email for a input with the email
+    -->
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <a href="http://localhost"><img id="profile-img" class="profile-img-card" src="img/logo.svg" /></a> <!-- to display the image profile-->
+           
+            <form class="form-signin" onsubmit='return checkPw();'>
+              
+                <input type="email" id="inputEmail" class="form-control" placeholder="Email Adresse" required autofocus>
+                <input type="text" id="inputPseudonym" class="form-control" placeholder="Pseudonym" required>
+                <input type="password" id="pw1" class="form-control" placeholder="Passwort" required>
+                <input type="password" id="pw2" class="form-control" placeholder="Passwort bestätigen" required>
+                <p id="error"></p>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" id="registerButton">Registrieren</button>
+            </form>
+            <!-- /form -->
+            <button class="btn btn-lg btn-primary btn-block btn-signin" id="backToRegister" type="button" onclick="window.location.replace('file:///C:/Users/nguem/Downloads/Informatik-STUDIUM/Vorlesung%20drittes%20Semester/INT/INT_Projekt/Gruppe_3(bestGroup)/secure-messengerEndVersion/secure_messenger/loginApplication.html')"
+                ;>zum Login</button>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" id="settings" type="button" onclick='showSettings()'>Einstellungen</button>
+
+        </div>
+        <!-- /card-container -->
+    </div>
+    <!-- /card-container -->
+    <div class="card card-container2">
+        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+        <a href="http://localhost"><img id="profile-img" class="profile-img-card" src="img/logo.svg"/></a> <!-- to display the image profile-->
+    
+        <form class="form-signin" onsubmit='saveConfig();'>
+            
+            IpLogin <input type="text" id="inputIpLogin" class="form-control" placeholder="IpLogin" value="http://localhost:5001">            
+            IpChat <input type="text" id="inputIpChat" class="form-control" placeholder="IpChat" value="http://localhost:5000">            
+            IpRegister <input type="text" id="inputIpRegister" class="form-control" placeholder="IpRegister" value="http://localhost:5002">
+            <button class="btn btn-lg btn-primary btn-block btn-signin" id="settings" type="button" onclick='saveConfig()'>Einstellungen speichern</button>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" id="settings" type="button" onclick='resetConfig()'>Einstellungen zurücksetzen</button>
+            <p id="error"></p>
+        </form>
+        <!-- /form -->
+    </div>
+    </div>
+    <!-- /container -->
+</body>
+
+</html>

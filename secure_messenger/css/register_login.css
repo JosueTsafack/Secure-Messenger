@@ -1,0 +1,121 @@
+/*
+ * Specific styles of signin component
+ */
+/*
+ * General styles
+ */
+body, html {
+    height: 100%; /*Using this effect, the top section of the page adapts to your entire screen resolution (100% height)*/
+    background-color: #e5e5e5;
+
+}
+
+.card-container {
+    max-width: 350px; /*without max the window is larger*/
+    padding: 40px ;
+}
+.card-container2{
+    padding: 40px 40px;
+    max-width: 350px; /*without max, the window is larger*/
+    position: absolute; /*to make the class(card-container2) adapt to the following left attribute at the beginning*/
+    left: -100%;
+    transition:  0.5s ;  /*to set the time for the calles window to appear on the page*/ 
+}
+
+.btn {
+    font-weight: 700;
+    height: 360px;
+}
+
+/*
+ * Card component
+ */
+.card {
+    /*bordor: 1px solid;  to make the border solid */
+    background-color: #F7F7F7; /*Color Hex Gray97*/
+    /* just in case there no content*/
+    /*padding or margin: top sides bottom e.g */
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 50px;
+    /* shadows and rounded borders */
+    border-radius: 20px; /*for the rounded borders*/
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    /*box-shadow: right bottom fussy   but if fussy is too high all borders will be fussy*/
+}
+
+.profile-img-card {
+    width: 96px;
+    height: 96px;
+    margin: auto ; /*to center the image*/
+    display: block; /*otherwise the image doesnt appear*/
+}
+
+/*
+ * Form styles
+ */
+.form-control{ /*the same class name that stands for all the input fields*/
+    direction: ltr; /*Set the text direction in the corresponding input fields to: "left-to-right"*/
+    height: 44px; /*the heigt of the input fields*/
+    font-size: 16px; /*for the size of the inputs placeholders*/
+}
+
+/*i used two different presentation types to adapt them for the login and the registrierung*/
+.form-signin input[type=email], /* '.' for classes*/
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button,
+#backToRegister, /* '#' for id's*/
+#toLogin,
+#settings {
+   width:  100%; /*so that it occupies the whole width of the card*/
+    display: block; /* display all inpust and buttons as a block so that it doesn't create any space them*/
+    margin-bottom: 10px; /*to create a little space between the inputs and buttons*/
+    box-sizing: border-box; /*so that the box always adapts to the available space*/
+}
+
+/*
+ * to css the inputs fields when they have the focus
+ */
+.form-signin .form-control:focus {/*to target two nested classes. 'focus' is used to give the focus to the clicked field*/
+    border-color: #068FCC;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+/*
+ * to css the the buttons
+ */
+.btn.btn-signin { 
+    /*background-color: #4d90fe; */
+    background-color: #068FCC;
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 20px; /*20 seems to be the limit*/
+    border: none;
+    -o-transition: all 0.218s;
+    -moz-transition: all 0.218s;
+    -webkit-transition: all 0.218s;
+    transition: all 0.218s;
+}
+
+/*
+ * to css the buttons when they have the focus
+ behavior of the text's buttons when the cursor hovers over them or when they have the focus or are active*
+ */
+.btn.btn-signin:hover,
+.btn.btn-signin:active,
+.btn.btn-signin:focus {
+    background-color: #2A657F;
+    color: white; /*color of the text's buttons when the cursor hovers over them or when they have the focus*/
+}
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
