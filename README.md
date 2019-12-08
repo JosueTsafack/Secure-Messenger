@@ -1,1 +1,1 @@
-# Complete Chat App, front & backend using JavaScript and Java
+# Complete Chat App, front & backend using JavaScript, Java and MongoDB
